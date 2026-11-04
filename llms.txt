@@ -1,0 +1,27 @@
+# Pablo Alonso Aznar · Automatización con IA para pymes (Barcelona y online)
+
+> Consultor independiente que construye automatizaciones con IA para pymes de 1 a 15 personas: clips verticales automáticos a partir de vídeo largo, clasificación de correo y formularios con modelos de lenguaje, informes semanales automáticos desde hojas de cálculo e implantación de agentes de IA (Claude Code) en la empresa. Economista por la UOC y cofundador de Astra Creative Audio.
+
+## Servicios y precios (sin IVA, sin suscripción al consultor)
+
+- Clips verticales automáticos desde vídeo largo: 180 €/mes por 12 clips; 15 € por clip suelto; 400 €/mes por 30 clips. Subtítulo palabra a palabra corregido a mano. Entrega en 48-72 h. Los 3 primeros clips de un vídeo del cliente, sin coste.
+- Bandeja de correo y formularios clasificada con IA: 450 € de instalación + 60 €/mes. Clasifica por área y urgencia y deja un borrador de respuesta; una persona revisa y envía. Listo en 5 días laborables.
+- Informe semanal automático desde Google Sheets o Excel: 300 € por informe + 30 €/mes. Listo en 5 días laborables.
+- Implantación de agentes de IA (Claude Code) en la empresa: sesión de 3 horas 600 €; día completo 1.200 €; implantación con 30 días de soporte y seguimiento 2.200 €. Equipos de 1 a 10 personas. Presencial en Barcelona u online.
+
+## Cómo trabaja
+
+Precio por escrito antes de la primera hora; una parte por adelantado; todo queda en las máquinas y cuentas del cliente; nada se contesta ni se publica solo (el sistema prepara, una persona revisa y envía). Transcripción de vídeo en local con Whisper; los datos no salen de las cuentas del cliente.
+
+## Casos
+
+- Agencia de formación y marca personal (2026): pipeline en Python de vídeo largo a clips 9:16 con subtítulo palabra a palabra (Whisper + ffmpeg); 40 guiones puntuados por un motor calibrado con el corpus del cliente; carruseles generados desde JSON; hub de contenido en Notion por API.
+- Astra Creative Audio (cofundador, 2026): empresa de software musical operada con varios agentes de IA en paralelo con memoria y reglas compartidas; cerca de 20.000 líneas de C++ de producto escritas con agentes; tienda con licencias; lanzamiento de prensa a 64 medios en una semana.
+- TueconomIA (Mytel AI Technology): 100 noticias económicas al día explicadas para 8 perfiles con la API de Gemini sobre Firebase.
+
+## Contacto
+
+- Web: https://eldukebliko.github.io/automatizaciones/
+- Email: pabloalonsoaznar99@gmail.com
+- LinkedIn: https://www.linkedin.com/in/pablo-alonso-aznar
+- Zona: Barcelona (presencial) y toda España (online). Idiomas: español, catalán, inglés.

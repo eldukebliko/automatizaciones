@@ -40,3 +40,11 @@ dueño de estudio, director de academia, sin perfil técnico): compra confianza 
 - **Elemento firma:** el **subtítulo karaoke vivo** dentro del teléfono: las palabras se iluminan en amarillo una a una,
   como en los clips reales que entrega. Es su producto, no una metáfora.
 - Descartado: oscuro tipo Astra (aleja al gestor: parece producto tech) y cálido editorial (sin resultado visible).
+
+## Segunda pasada (04-nov-2026, publicada)
+Pablo aprobó la dirección blanca y pidió «modernizar y mejorar los mockups». Cambios: teléfono con isla, barra de progreso
+animada, contador «clip N de 7» sincronizado con la línea de tiempo, silueta con luz de escena, onda de audio, iconos
+laterales y pie tipo reel; línea de tiempo con el clip activo resaltado; mockups de bandeja (remitentes, hora, etiquetas),
+informe (KPIs, barras, lectura) y agente (chat con etiquetas reglas/memoria/Notion); sección «Una semana, antes y después»
+(marcada como ejemplo, no dato de cliente); cabecera fija con botón; chips de confianza (Astra, Mytel, UOC, Barcelona).
+Rechazada antes: dirección «panel de instrumento» (Pablo: «es fea»).

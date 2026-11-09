@@ -57,10 +57,10 @@
       "priceRange": "180 € - 2.200 €",
       "availableLanguage": ["es", "ca", "en"],
       "makesOffer": [
-        {"@type": "Offer", "name": "Clips verticales automáticos desde vídeo largo", "price": "180", "priceCurrency": "EUR", "description": "12 clips 9:16 al mes con subtítulo palabra a palabra, corregido a mano. 15 € por clip suelto; 400 €/mes por 30 clips.", "itemOffered": {"@type": "Service", "name": "Clips verticales automáticos", "serviceType": "Reutilización de vídeo con IA"}},
-        {"@type": "Offer", "name": "Clasificación automática de correo y formularios con IA", "price": "450", "priceCurrency": "EUR", "description": "Instalación 450 € más 60 €/mes. Cada mensaje se clasifica por área y urgencia y deja un borrador de respuesta; una persona revisa y envía.", "itemOffered": {"@type": "Service", "name": "Bandeja de correo clasificada con IA", "serviceType": "Automatización de correo con LLM"}},
-        {"@type": "Offer", "name": "Informe semanal automático desde hoja de cálculo", "price": "300", "priceCurrency": "EUR", "description": "300 € por informe más 30 €/mes. Cada lunes, correo o PDF con cifras, variación semanal y lectura.", "itemOffered": {"@type": "Service", "name": "Informes automáticos", "serviceType": "Automatización de informes con IA"}},
-        {"@type": "Offer", "name": "Implantación de agentes de IA (Claude Code) en la empresa", "price": "600", "priceCurrency": "EUR", "description": "Sesión de 3 horas 600 €; día completo 1.200 €; implantación con 30 días de soporte 2.200 €. Para equipos de 1 a 10 personas.", "itemOffered": {"@type": "Service", "name": "Implantación de agentes de IA", "serviceType": "Consultoría e implantación de Claude Code"}}
+        {"@type": "Offer", "name": "Cada charla que grabas, en Instagram esa misma semana (clips verticales automáticos)", "price": "180", "priceCurrency": "EUR", "description": "12 clips 9:16 al mes con subtítulo palabra a palabra, corregido a mano. 15 € por clip suelto; 400 €/mes por 30 clips.", "itemOffered": {"@type": "Service", "name": "Clips verticales automáticos", "serviceType": "Reutilización de vídeo con IA"}},
+        {"@type": "Offer", "name": "Cada consulta con la respuesta ya escrita el mismo día (bandeja clasificada con IA)", "price": "450", "priceCurrency": "EUR", "description": "Instalación 450 € más 60 €/mes. Cada mensaje se clasifica por área y urgencia y deja un borrador de respuesta; una persona revisa y envía.", "itemOffered": {"@type": "Service", "name": "Bandeja de correo clasificada con IA", "serviceType": "Automatización de correo con LLM"}},
+        {"@type": "Offer", "name": "Tus números de la semana en el buzón el lunes a las 9:00 (informe automático)", "price": "300", "priceCurrency": "EUR", "description": "300 € por informe más 30 €/mes. Cada lunes, correo o PDF con cifras, variación semanal y lectura.", "itemOffered": {"@type": "Service", "name": "Informes automáticos", "serviceType": "Automatización de informes con IA"}},
+        {"@type": "Offer", "name": "Tu equipo con un ayudante de IA que cumple vuestras reglas (implantación de Claude Code)", "price": "600", "priceCurrency": "EUR", "description": "Sesión de 3 horas 600 €; día completo 1.200 €; implantación con 30 días de soporte 2.200 €. Para equipos de 1 a 10 personas.", "itemOffered": {"@type": "Service", "name": "Implantación de agentes de IA", "serviceType": "Consultoría e implantación de Claude Code"}}
       ]
     },
     {
@@ -70,7 +70,7 @@
       "name": "Automatización con IA para pymes en Barcelona | Pablo Alonso",
       "inLanguage": "es",
       "about": {"@id": "https://eldukebliko.github.io/automatizaciones/#servicio"},
-      "dateModified": "2026-11-04"
+      "dateModified": "2026-11-09"
     },
     {
       "@type": "FAQPage",
@@ -132,20 +132,20 @@
   .who .r{font-size:14px;color:var(--muted)}
 
   /* demo: línea de tiempo + teléfono */
-  .demo{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;justify-content:center}
-  .tl{background:var(--soft);border-radius:18px;padding:16px;width:100%;max-width:236px}
+  .demo{display:grid;grid-template-columns:1fr;gap:10px;justify-items:center}
+  .tl{background:var(--soft);border-radius:18px;padding:14px 16px;width:100%;max-width:282px}
   .tl .h{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
   .tl .h span{color:var(--muted);font-weight:500;font-family:var(--mono);font-size:11px}
   .tl .bar{height:12px;border-radius:7px;background:#dfe2dc;position:relative;overflow:hidden}
   .tl .bar i{position:absolute;top:0;bottom:0;background:#9aa09a;border-radius:7px;transition:background .3s ease}
   .tl .bar i.on{background:var(--yellow)}
-  .tl .rows{display:grid;gap:8px;margin-top:12px}
+  .tl .rows{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
   .tl .row{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted);padding:5px 6px;border-radius:9px;transition:background .3s ease,color .3s ease}
-  .tl .row b{display:inline-block;width:24px;height:38px;border-radius:6px;background:url(clip-bg.jpg) center/cover;flex:none;position:relative}
+  .tl .row b{display:inline-block;width:20px;height:32px;border-radius:6px;background:url(clip-bg.jpg) center/cover;flex:none;position:relative}
   .tl .row b::after{content:"";position:absolute;left:4px;right:4px;bottom:7px;height:4px;background:var(--yellow);border-radius:2px}
   .tl .row.on{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 4px 14px -10px rgba(0,0,0,.4)}
   .tl .row small{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--muted);font-weight:500}
-  .link{width:34px;height:3px;background:var(--yellow);border-radius:2px;justify-self:center;position:relative}
+  .link{width:34px;height:3px;background:var(--yellow);border-radius:2px;justify-self:center;position:relative;transform:rotate(90deg);margin:10px 0}
   .link::after{content:"";position:absolute;right:-5px;top:-4px;border:6px solid transparent;border-left:8px solid var(--yellow);border-right:0}
 
   .phone{width:282px;aspect-ratio:9/18.6;border-radius:40px;background:#0d0d0d;padding:10px;box-shadow:0 40px 80px -36px rgba(0,0,0,.55),inset 0 0 0 2px #2a2a2a;position:relative}
@@ -173,13 +173,13 @@
   .short{padding:8px 0 56px}
   .short h2{font-size:clamp(22px,2.8vw,28px)}
   .shortcuts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
-  .sc{display:flex;flex-direction:column;gap:8px;text-decoration:none;border:1.5px solid var(--line);border-radius:18px;padding:18px 18px 16px;min-height:168px;transition:border-color .2s ease,transform .2s ease,background .2s ease}
+  .sc{position:relative;display:flex;flex-direction:column;gap:8px;text-decoration:none;border:1.5px solid var(--line);border-radius:18px;padding:18px 18px 16px;min-height:168px;transition:border-color .2s ease,transform .2s ease,background .2s ease}
   .sc:hover{border-color:var(--ink);transform:translateY(-3px)}
   .sc .q{font-weight:800;font-size:17.5px;letter-spacing:-.01em;line-height:1.25}
   .sc .w{font-size:13px;color:var(--muted)}
-  .sc .go{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
-  .sc .go span{background:var(--yellow);border-radius:999px;padding:3px 10px;font-family:var(--mono);font-size:11.5px;font-weight:500}
-  .sc .go::after{content:"→";font-size:18px}
+  .sc .go{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:7px;font-weight:700;font-size:14.5px;padding-right:28px}
+  .sc .go span{background:var(--yellow);border-radius:999px;padding:3px 10px;font-family:var(--mono);font-size:11.5px;font-weight:500;white-space:nowrap}
+  .sc .go::after{content:"→";font-size:20px;position:absolute;right:16px;bottom:14px}
 
   /* paquetes */
   .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
@@ -276,9 +276,6 @@
 
   @media (max-width:920px){
     .hero{grid-template-columns:1fr;gap:34px;padding-bottom:28px}
-    .demo{grid-template-columns:1fr;justify-items:center}
-    .link{transform:rotate(90deg);margin:6px 0}
-    .tl{max-width:282px}
     .shortcuts{grid-template-columns:1fr 1fr}
     .sc{min-height:0}
     .packs,.cases,.steps{grid-template-columns:1fr}
@@ -297,7 +294,7 @@
 <body>
 <header class="top" id="top"><div class="wrap in">
   <div>Pablo Alonso Aznar</div>
-  <nav aria-label="Secciones"><a href="#videos">Vídeos</a><a href="#correo">Correo</a><a href="#informes">Informes</a><a href="#agentes">Agentes</a><a href="#faq">Preguntas</a><a class="cta" href="#contacto">Cuéntame tu caso</a></nav>
+  <nav aria-label="Secciones"><a href="#videos">Clips</a><a href="#correo">Correo</a><a href="#informes">Informes</a><a href="#agentes">Agentes</a><a href="#faq">Preguntas</a><a class="cta" href="#contacto">Cuéntame tu caso</a></nav>
 </div></header>
 <div class="wrap">
 
@@ -305,7 +302,7 @@
   <div>
     <div class="eyebrow">Automatización con IA para pymes · Barcelona y online</div>
     <h1 id="h1">Lo que tu equipo repite cada semana, <mark>hecho solo</mark>.</h1>
-    <p class="lead">Vídeo, correo, informes y agentes de IA. Precio cerrado, instalado en vuestras cuentas y revisado por una persona antes de que nada salga.</p>
+    <p class="lead">Tus charlas en Instagram esa misma semana. Las consultas contestadas el mismo día. Los números el lunes a las 9. Precio cerrado y una persona revisa antes de que nada salga.</p>
     <div class="ctas"><a class="btn y" href="#contacto">Cuéntame tu caso</a><a class="sec" href="#atajos">Ver qué puedo automatizar</a></div>
     <div class="who">
       <img src="foto.jpg" width="64" height="64" alt="Pablo Alonso Aznar, consultor de automatización con IA en Barcelona">
@@ -341,25 +338,25 @@
 <section class="short" id="atajos" aria-labelledby="h-short">
   <h2 id="h-short">¿Qué te trae aquí?</h2>
   <div class="shortcuts">
-    <a class="sc" href="#videos"><span class="q">Grabo charlas o clases y nunca llegan a Instagram</span><span class="w">Academias, formadores, podcasts, estudios de música</span><span class="go">Clips automáticos <span>desde 15 €/clip</span></span></a>
-    <a class="sc" href="#correo"><span class="q">Me ahogan los correos y los formularios</span><span class="w">Gestorías, despachos, estudios con reservas, academias</span><span class="go">Bandeja clasificada <span>450 €</span></span></a>
-    <a class="sc" href="#informes"><span class="q">Cada semana monto el mismo informe a mano</span><span class="w">Quien vive en una hoja de cálculo</span><span class="go">Informe automático <span>300 €</span></span></a>
-    <a class="sc" href="#agentes"><span class="q">Quiero IA dentro de mi equipo, con reglas</span><span class="w">Agencias, consultoras, despachos de 1 a 10 personas</span><span class="go">Agentes instalados <span>desde 600 €</span></span></a>
+    <a class="sc" href="#videos"><span class="q">Grabo charlas o clases y nunca llegan a Instagram</span><span class="w">Academias, formadores, podcasts, estudios de música</span><span class="go">7 clips listos el jueves <span>desde 15 €/clip</span></span></a>
+    <a class="sc" href="#correo"><span class="q">Me ahogan los correos y los formularios</span><span class="w">Gestorías, despachos, estudios con reservas, academias</span><span class="go">Respuestas listas el mismo día <span>450 €</span></span></a>
+    <a class="sc" href="#informes"><span class="q">Cada semana monto el mismo informe a mano</span><span class="w">Quien vive en una hoja de cálculo</span><span class="go">El informe, el lunes a las 9 <span>300 €</span></span></a>
+    <a class="sc" href="#agentes"><span class="q">Quiero IA dentro de mi equipo, con reglas</span><span class="w">Agencias, consultoras, despachos de 1 a 10 personas</span><span class="go">Un agente con vuestras reglas <span>desde 600 €</span></span></a>
   </div>
 </section>
 
 <section id="paquetes" class="rv" aria-labelledby="h-packs">
   <div class="eyebrow">Qué ofrezco</div>
-  <h2 id="h-packs">Precio cerrado. Sin suscripción a mí.</h2>
-  <p class="muted">Lo instalado queda en vuestras máquinas y cuentas. Precios sin IVA.</p>
+  <h2 id="h-packs">Lo que compras es el resultado. La IA va por detrás.</h2>
+  <p class="muted">Precio cerrado, sin suscripción a mí. Lo instalado queda en vuestras máquinas y cuentas. Precios sin IVA.</p>
   <div class="packs">
     <article class="pack" id="videos">
       <div class="mock" aria-hidden="true">
         <div class="ttl"><b>Charla del martes</b><span>58:12 → 7 clips</span></div>
         <div class="mini"><i><b>lo que <em>nadie</em></b></i><i><b>el <em>error</em> nº 1</b></i><i><b><em>cómo</em> empezar</b></i><i><b>tres <em>señales</em></b></i></div>
       </div>
-      <h3>Clips verticales automáticos desde tus vídeos</h3>
-      <p>Graba como siempre. Yo saco los clips.</p>
+      <h3>Cada charla que grabas, en Instagram esa misma semana</h3>
+      <p>Grabas el martes como siempre. El jueves tienes 7 clips verticales listos para publicar, con subtítulo palabra a palabra.</p>
       <div class="price">180 €</div><div class="per">al mes · 12 clips</div>
       <ul>
         <li>5–8 clips por vídeo, subtítulo palabra a palabra, gancho elegido a mano</li>
@@ -375,8 +372,8 @@
         <div class="mail"><div class="av">JR</div><div class="bx"><div class="fr">Jordi R. <span>09:40</span></div><div class="sj">¿Tenéis hueco el jueves por la tarde?</div></div><span class="lb g">borrador listo</span></div>
         <div class="mail"><div class="av">AC</div><div class="bx"><div class="fr">Anna C. <span>10:05</span></div><div class="sj">No me llega la factura de octubre</div></div><span class="lb k">Urgente · Marta</span></div>
       </div>
-      <h3>La bandeja de correo se clasifica sola</h3>
-      <p>Correo, formulario o WhatsApp: entra clasificado y con el borrador escrito.</p>
+      <h3>Cada consulta contestada el mismo día, con la respuesta ya escrita</h3>
+      <p>Abres el correo y cada consulta llega clasificada y con su respuesta redactada con vuestras tarifas. Revisas y envías.</p>
       <div class="price">450 €</div><div class="per">instalación · + 60 €/mes</div>
       <ul>
         <li>Cada mensaje, por área y urgencia</li>
@@ -392,8 +389,8 @@
         <div class="bars"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:80%"></i><i class="y" style="height:100%"></i></div>
         <div class="note">Las altas suben por el curso de octubre; los 3 impagos son del mismo cliente.</div>
       </div>
-      <h3>El informe de los lunes, automático</h3>
-      <p>Tu hoja de cálculo, convertida cada lunes en un informe leído.</p>
+      <h3>Tus números de la semana en el buzón el lunes a las 9:00</h3>
+      <p>Sin abrir la hoja de cálculo: cifras, variación y qué significa, leído en el café.</p>
       <div class="price">300 €</div><div class="per">por informe · + 30 €/mes</div>
       <ul>
         <li>Cifras, variación semanal y cinco líneas de lectura, por correo o PDF</li>
@@ -411,8 +408,8 @@
             <div class="m ai"><span class="lb">reglas.md</span><span class="lb">memoria</span><span class="lb y">Notion</span><br><b>14 consultas leídas.</b> 9 borradores listos con vuestras tarifas. 2 urgentes para Marta. 3 necesitan un documento que no tengo: las dejo señaladas, no respondo.</div>
           </div>
         </div>
-        <h3>Agentes de IA instalados en tu empresa (Claude Code)</h3>
-        <p>Equipos de 1 a 10 personas. Salís con un agente funcionando en vuestro ordenador, con reglas escritas de qué puede tocar, demostrado delante de vosotros, y 30 días de soporte.</p>
+        <h3>Tu equipo con un ayudante de IA que cumple vuestras reglas desde el primer día</h3>
+        <p>Equipos de 1 a 10 personas. Al acabar la sesión hay un agente (Claude Code) funcionando en vuestro ordenador sobre una tarea real, con reglas escritas de qué puede tocar, y 30 días de soporte.</p>
         <div class="ad"><b>Antes:</b> cada uno prueba la IA por su cuenta. <b>Después:</b> un agente con reglas, memoria y acceso a vuestras herramientas.</div>
       </div>
       <div class="prices">

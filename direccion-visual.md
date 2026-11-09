@@ -48,3 +48,12 @@ laterales y pie tipo reel; línea de tiempo con el clip activo resaltado; mockup
 informe (KPIs, barras, lectura) y agente (chat con etiquetas reglas/memoria/Notion); sección «Una semana, antes y después»
 (marcada como ejemplo, no dato de cliente); cabecera fija con botón; chips de confianza (Astra, Mytel, UOC, Barcelona).
 Rechazada antes: dirección «panel de instrumento» (Pablo: «es fea»).
+
+## Tercera pasada (04-nov-2026, publicada)
+Pablo, como consumidor: «es muy tostón, necesito atajos» y «el subtítulo no está centrado». Cambios: bloque «¿Qué te trae
+aquí?» con 4 atajos por problema (vídeo, correo, informe, agentes) que saltan a su paquete; cabecera con anclas cortas;
+se eliminan las secciones «Para quién», «Antes/después» y «Cuatro reglas» (el antes/después pasa a una línea dentro de
+cada paquete y las reglas a chips bajo «Cómo funciona»); casos en una frase; subtítulo centrado a todo el ancho; la
+silueta CSS se sustituye por `clip-bg.jpg`, un fotograma real de un clip entregado en jul-2026 desenfocado (sigma 70,
+irreconocible) que se usa también en los mini-clips y en la línea de tiempo. Error corregido: la clase `sc` del header
+(scroll) chocaba con la clase `sc` de las tarjetas de atajo; ahora `scrolled`.

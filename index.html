@@ -70,7 +70,7 @@
       "name": "Automatización con IA para pymes en Barcelona | Pablo Alonso",
       "inLanguage": "es",
       "about": {"@id": "https://eldukebliko.github.io/automatizaciones/#servicio"},
-      "dateModified": "2026-11-09"
+      "dateModified": "2026-11-10"
     },
     {
       "@type": "FAQPage",
@@ -182,7 +182,7 @@
   .sc .go::after{content:"→";font-size:20px;position:absolute;right:16px;bottom:14px}
 
   /* paquetes */
-  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  .packs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
   .pack{background:var(--soft);border-radius:22px;padding:18px 20px 24px;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
   .pack:hover{transform:translateY(-3px);box-shadow:0 24px 50px -36px rgba(0,0,0,.45)}
   .pack h3{margin-top:4px}
@@ -274,12 +274,59 @@
   .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
   .rv.in{opacity:1;transform:none}
 
+  /* calculadora de ahorro */
+  .calc{background:var(--soft);border-radius:26px;padding:26px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:22px}
+  .calc .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .calc .tabs button{font:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer}
+  .calc .tabs button[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .calc label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px}
+  .calc label output{float:right;font-family:var(--mono);font-size:14px;font-weight:500;background:#fff;padding:2px 9px;border-radius:999px}
+  .calc input[type=range]{width:100%;accent-color:var(--ink);height:28px}
+  .calc .ass{font-size:13.5px;color:var(--muted);margin-top:14px}
+  .res{background:var(--yellow);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px}
+  .res .k{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .res .n{font-size:clamp(40px,5vw,58px);font-weight:800;letter-spacing:-.04em;line-height:1}
+  .res .n small{font-size:17px;font-weight:700;letter-spacing:0;margin-left:6px}
+  .res .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1.5px solid rgba(0,0,0,.18);padding-top:14px}
+  .res .grid b{display:block;font-size:24px;letter-spacing:-.03em;line-height:1.1}
+  .res .grid span{font-size:13px;font-weight:600}
+  .res .verdict{font-size:15px;font-weight:700;line-height:1.35;background:var(--ink);color:#fff;border-radius:14px;padding:12px 14px;margin-top:auto}
+  .res .verdict.bad{background:#fff;color:var(--ink)}
+
+  /* paso a paso con días */
+  .path{margin-top:26px;display:grid;gap:0}
+  .st{display:grid;grid-template-columns:118px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
+  .st:first-child{border-top:0}
+  .st .d{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--muted);padding-top:6px;display:flex;flex-direction:column;gap:6px}
+  .st .d b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--yellow);font-family:var(--font);font-size:17px;font-weight:800;color:var(--ink)}
+  .st h3{font-size:22px;margin-bottom:6px}
+  .st p{color:var(--muted);font-size:16px;max-width:62ch;margin-bottom:8px}
+  .st .yt{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+  .st .yt span{display:flex;gap:7px;align-items:baseline}
+  .st .yt em{font-style:normal;font-family:var(--mono);font-size:11px;background:var(--soft);padding:2px 7px;border-radius:999px;color:var(--ink)}
+  .st.win{background:var(--soft);border-radius:22px;padding:22px;border-top:0;margin-top:8px}
+  .st.win .d b{background:var(--ink);color:#fff}
+
+  /* hoy / con esto / ganas dentro de cada paquete */
+  .hcg{display:grid;gap:6px;margin:12px 0 0;padding:0;list-style:none;font-size:14px;border-top:1px dashed var(--line);padding-top:12px}
+  .hcg li{display:grid;grid-template-columns:64px 1fr;gap:8px}
+  .hcg li b{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);padding-top:3px}
+  .hcg li.g b{color:var(--ink);font-weight:700}
+  .hcg li.g{font-weight:700}
+  .big .hcg{border-top-color:#333}.big .hcg li b{color:#aaa}.big .hcg li.g b{color:var(--yellow)}
+
+  .strip{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  .strip b{display:block;font-size:26px;color:var(--ink);letter-spacing:-.03em;font-weight:800}
+
   @media (max-width:920px){
     .hero{grid-template-columns:1fr;gap:34px;padding-bottom:28px}
     .shortcuts{grid-template-columns:1fr 1fr}
     .sc{min-height:0}
     .packs,.cases,.steps{grid-template-columns:1fr}
     .big{grid-template-columns:1fr}
+    .calc{grid-template-columns:1fr;padding:18px}
+    .st{grid-template-columns:1fr;gap:10px;padding:18px 0}
+    .st.win{padding:18px}
     section{padding:48px 0}
     header.top nav a:not(.cta){display:none}
   }
@@ -294,16 +341,16 @@
 <body>
 <header class="top" id="top"><div class="wrap in">
   <div>Pablo Alonso Aznar</div>
-  <nav aria-label="Secciones"><a href="#videos">Clips</a><a href="#correo">Correo</a><a href="#informes">Informes</a><a href="#agentes">Agentes</a><a href="#faq">Preguntas</a><a class="cta" href="#contacto">Cuéntame tu caso</a></nav>
+  <nav aria-label="Secciones"><a href="#calculadora">Calculadora</a><a href="#pasos">Paso a paso</a><a href="#paquetes">Precios</a><a href="#faq">Preguntas</a><a class="cta" href="#contacto">Cuéntame tu caso</a></nav>
 </div></header>
 <div class="wrap">
 
 <section class="hero" aria-labelledby="h1">
   <div>
     <div class="eyebrow">Automatización con IA para pymes · Barcelona y online</div>
-    <h1 id="h1">Lo que tu equipo repite cada semana, <mark>hecho solo</mark>.</h1>
-    <p class="lead">Tus charlas en Instagram esa misma semana. Las consultas contestadas el mismo día. Los números el lunes a las 9. Precio cerrado y una persona revisa antes de que nada salga.</p>
-    <div class="ctas"><a class="btn y" href="#contacto">Cuéntame tu caso</a><a class="sec" href="#atajos">Ver qué puedo automatizar</a></div>
+    <h1 id="h1">Tu equipo pierde horas cada semana en tareas que <mark>ya se hacen solas</mark>.</h1>
+    <p class="lead">Cortar vídeos. Contestar presupuestos. Montar el informe del lunes. Pon tus horas en la calculadora y verás cuánto te cuesta hoy, cuánto cuesta arreglarlo y en qué semana lo recuperas. Precio cerrado y una persona revisa antes de que nada salga.</p>
+    <div class="ctas"><a class="btn y" href="#calculadora">Calcular lo que pierdo</a><a class="sec" href="#pasos">Ver el paso a paso</a></div>
     <div class="who">
       <img src="foto.jpg" width="64" height="64" alt="Pablo Alonso Aznar, consultor de automatización con IA en Barcelona">
       <div><div class="n">Pablo Alonso Aznar</div><div class="r">Economista · Cofundador de Astra Creative Audio</div></div>
@@ -336,18 +383,62 @@
 </section>
 
 <section class="short" id="atajos" aria-labelledby="h-short">
-  <h2 id="h-short">¿Qué te trae aquí?</h2>
+  <h2 id="h-short">¿Cuál es tu caso? Elige uno y la calculadora se pone con tus números.</h2>
   <div class="shortcuts">
-    <a class="sc" href="#videos"><span class="q">Grabo charlas o clases y nunca llegan a Instagram</span><span class="w">Academias, formadores, clínicas, podcasts</span><span class="go">7 clips listos el jueves <span>desde 15 €/clip</span></span></a>
-    <a class="sc" href="#correo"><span class="q">Me ahogan los correos y los formularios</span><span class="w">Gestorías, despachos, clínicas con reservas, academias</span><span class="go">Respuestas listas el mismo día <span>450 €</span></span></a>
-    <a class="sc" href="#informes"><span class="q">Cada semana monto el mismo informe a mano</span><span class="w">Quien vive en una hoja de cálculo</span><span class="go">El informe, el lunes a las 9 <span>300 €</span></span></a>
-    <a class="sc" href="#agentes"><span class="q">Quiero IA dentro de mi equipo, con reglas</span><span class="w">Agencias, consultoras, despachos de 1 a 10 personas</span><span class="go">Un agente con vuestras reglas <span>desde 600 €</span></span></a>
+    <a class="sc" href="#calculadora" data-case="clips"><span class="q">Grabo charlas o clases y nunca llegan a Instagram</span><span class="w">Academias, formadores, clínicas, podcasts</span><span class="go">7 clips listos el jueves <span>desde 15 €/clip</span></span></a>
+    <a class="sc" href="#calculadora" data-case="correo"><span class="q">Me ahogan los correos y los formularios</span><span class="w">Gestorías, despachos, clínicas con reservas, academias</span><span class="go">Respuestas listas el mismo día <span>450 €</span></span></a>
+    <a class="sc" href="#calculadora" data-case="informes"><span class="q">Cada semana monto el mismo informe a mano</span><span class="w">Quien vive en una hoja de cálculo</span><span class="go">El informe, el lunes a las 9 <span>300 €</span></span></a>
+    <a class="sc" href="#calculadora" data-case="agentes"><span class="q">Quiero IA dentro de mi equipo, con reglas</span><span class="w">Agencias, consultoras, despachos de 1 a 10 personas</span><span class="go">Un agente con vuestras reglas <span>desde 600 €</span></span></a>
+  </div>
+</section>
+
+<section id="calculadora" aria-labelledby="h-calc">
+  <div class="eyebrow">Cuánto te cuesta hoy</div>
+  <h2 id="h-calc">Pon tus horas. Mira el dinero.</h2>
+  <p class="muted">Son tus números, no los míos. Mueve las dos barras. Cuento con que una persona sigue dedicando 1 de cada 5 horas a revisar lo que la máquina prepara.</p>
+  <div class="calc">
+    <div>
+      <div class="tabs" role="tablist" aria-label="Tipo de tarea">
+        <button role="tab" data-case="clips" aria-selected="true">Vídeo a clips</button>
+        <button role="tab" data-case="correo" aria-selected="false">Consultas y presupuestos</button>
+        <button role="tab" data-case="informes" aria-selected="false">Informe semanal</button>
+        <button role="tab" data-case="agentes" aria-selected="false">Agente para el equipo</button>
+      </div>
+      <label for="h">Horas a la semana <span id="hl">cortando y subtitulando vídeo</span> <output id="ho" for="h">5 h</output></label>
+      <input type="range" id="h" min="1" max="20" step="1" value="5">
+      <label for="r">Lo que cuesta esa hora (sueldo + seguros) <output id="ro" for="r">20 €</output></label>
+      <input type="range" id="r" min="12" max="60" step="1" value="20">
+      <p class="ass" id="ass">Si hoy no lo hace nadie, lo que ganas no es ahorro: es publicar 7 clips por semana sin contratar a nadie. 28 clips al mes por 180 € salen a 6,4 € el clip.</p>
+    </div>
+    <div class="res" aria-live="polite">
+      <div><div class="k">Hoy te cuesta</div><div class="n"><span id="cost">433</span><small>€ / mes</small></div></div>
+      <div class="grid">
+        <div><b id="price">180 €</b><span id="pricel">al mes, sin instalación</span></div>
+        <div><b id="hours">17 h</b><span>vuelven al equipo cada mes</span></div>
+        <div><b id="net">+166 €</b><span>te quedan cada mes desde el mes 2</span></div>
+        <div><b id="pay">mes 1</b><span id="payl">empiezas a ganar, no hay instalación</span></div>
+      </div>
+      <div class="verdict" id="verdict">Te compensa. Y las 17 horas vuelven desde la primera semana.</div>
+    </div>
+  </div>
+</section>
+
+<section id="pasos" aria-labelledby="h-pasos">
+  <div class="eyebrow">Paso a paso</div>
+  <h2 id="h-pasos">Del primer correo a las horas de vuelta. Con fechas.</h2>
+  <p class="muted">Esto es lo que pasa si me escribes hoy. En cada paso, qué haces tú y qué hago yo.</p>
+  <div class="path">
+    <div class="st"><div class="d"><b>1</b>Hoy · 15 min</div><div><h3>Me cuentas el proceso que más odias</h3><p>Una llamada o un correo. Te digo si merece la pena automatizarlo y cuánto cuesta. Si no merece la pena, también te lo digo y ahí acaba.</p><div class="yt"><span><em>tú</em>15 minutos</span><span><em>yo</em>te digo sí o no, y el precio</span></div></div></div>
+    <div class="st"><div class="d"><b>2</b>Mañana</div><div><h3>Precio por escrito y una muestra gratis</h3><p>Un correo con qué se entrega, cuánto cuesta y cuándo se paga. En clips, te mando los 3 primeros de un vídeo tuyo sin coste. Decides viendo el resultado, no una promesa.</p><div class="yt"><span><em>tú</em>eliges el vídeo o me das acceso</span><span><em>yo</em>precio cerrado + 3 clips</span></div></div></div>
+    <div class="st"><div class="d"><b>3</b>Días 2 a 5</div><div><h3>Lo instalo en vuestras cuentas y lo ves funcionar</h3><p>Con vuestros correos, vídeos u hojas reales, y con alguien del equipo delante. Queda una grabación y una lista de comprobación. Nada se contesta ni se publica solo.</p><div class="yt"><span><em>tú</em>una persona, 1 hora</span><span><em>yo</em>instalación y pruebas</span></div></div></div>
+    <div class="st"><div class="d"><b>4</b>Semana 2</div><div><h3>La persona pasa de hacerlo a revisarlo</h3><p>Los clips llegan el jueves. Las consultas llegan con la respuesta escrita. El informe está en el buzón el lunes a las 9. Mide tú: horas a la semana antes y después.</p><div class="yt"><span><em>tú</em>revisar y enviar</span><span><em>yo</em>soporte y ajustes</span></div></div></div>
+    <div class="st win"><div class="d"><b>€</b>Mes 2</div><div><h3>Solo la cuota, o nada. Y las horas se quedan.</h3><p>Lo instalado es vuestro: en vuestras máquinas y cuentas, sin suscripción a mí. Lo que pierdes hoy en horas se convierte en consultas contestadas el mismo día, clips publicados cada semana y lunes libres.</p><div class="yt"><span><em>tú</em>60 €/mes, 30 €/mes o 0 €</span><span><em>yo</em>a un correo de distancia</span></div></div></div>
   </div>
 </section>
 
 <section id="paquetes" class="rv" aria-labelledby="h-packs">
   <div class="eyebrow">Qué ofrezco</div>
-  <h2 id="h-packs">Lo que compras es el resultado. La IA va por detrás.</h2>
+  <h2 id="h-packs">Cuatro cosas que puedo dejarte funcionando. Con precio.</h2>
   <p class="muted">Precio cerrado, sin suscripción a mí. Lo instalado queda en vuestras máquinas y cuentas. Precios sin IVA.</p>
   <div class="packs">
     <article class="pack" id="videos">
@@ -362,7 +453,7 @@
         <li>5–8 clips por vídeo, subtítulo palabra a palabra, gancho elegido a mano</li>
         <li>15 € por clip suelto · 400 €/mes por 30 clips</li>
       </ul>
-      <div class="ad"><b>Antes:</b> alguien corta el vídeo a mano, o nadie. <b>Después:</b> el jueves hay 7 clips para revisar en 10 minutos.</div>
+      <ul class="hcg"><li><b>HOY</b><span>alguien corta el vídeo a mano, o nadie lo hace y la charla se pierde</span></li><li><b>CON ESTO</b><span>el jueves hay 7 clips para revisar en 10 minutos</span></li><li class="g"><b>GANAS</b><span>28 clips al mes publicados sin contratar a nadie</span></li></ul>
       <div class="t">Primeros 3 clips de un vídeo tuyo, sin coste</div>
     </article>
     <article class="pack" id="correo">
@@ -379,7 +470,7 @@
         <li>Cada mensaje, por área y urgencia</li>
         <li>Borrador con vuestras tarifas y plazos; una persona revisa y envía</li>
       </ul>
-      <div class="ad"><b>Antes:</b> se leen una a una y se reenvían. <b>Después:</b> se revisa y se envía.</div>
+      <ul class="hcg"><li><b>HOY</b><span>se leen una a una, se reenvían y el presupuesto sale tarde</span></li><li><b>CON ESTO</b><span>cada consulta llega clasificada y con la respuesta escrita</span></li><li class="g"><b>GANAS</b><span>contestar el mismo día a todos y las horas de leer correo</span></li></ul>
       <div class="t">Listo en 5 días laborables</div>
     </article>
     <article class="pack" id="informes">
@@ -396,7 +487,7 @@
         <li>Cifras, variación semanal y cinco líneas de lectura, por correo o PDF</li>
         <li>Plantilla pactada contigo, sin sorpresas</li>
       </ul>
-      <div class="ad"><b>Antes:</b> dos horas cada lunes. <b>Después:</b> está en el buzón a las 9:00.</div>
+      <ul class="hcg"><li><b>HOY</b><span>dos horas cada lunes copiando celdas</span></li><li><b>CON ESTO</b><span>el informe está en el buzón a las 9:00 con su lectura</span></li><li class="g"><b>GANAS</b><span>el lunes por la mañana y decidir con el dato fresco</span></li></ul>
       <div class="t">Listo en 5 días laborables</div>
     </article>
     <article class="pack big" id="agentes">
@@ -410,7 +501,7 @@
         </div>
         <h3>Tu equipo con un ayudante de IA que cumple vuestras reglas desde el primer día</h3>
         <p>Equipos de 1 a 10 personas. Al acabar la sesión hay un agente (Claude Code) funcionando en vuestro ordenador sobre una tarea real, con reglas escritas de qué puede tocar, y 30 días de soporte.</p>
-        <div class="ad"><b>Antes:</b> cada uno prueba la IA por su cuenta. <b>Después:</b> un agente con reglas, memoria y acceso a vuestras herramientas.</div>
+        <ul class="hcg"><li><b>HOY</b><span>cada uno prueba la IA por su cuenta y nadie sabe qué puede tocar</span></li><li><b>CON ESTO</b><span>un agente con reglas, memoria y acceso a vuestras herramientas</span></li><li class="g"><b>GANAS</b><span>las tareas repetitivas del equipo preparadas cada mañana</span></li></ul>
       </div>
       <div class="prices">
         <div><div class="price">600 €</div><div class="per">sesión de 3 horas</div></div>
@@ -421,13 +512,14 @@
   </div>
 </section>
 
-<section id="como" class="rv" aria-labelledby="h-como">
-  <div class="eyebrow">Cómo funciona</div>
-  <h2 id="h-como">Tres pasos, sin sorpresas</h2>
-  <div class="steps">
-    <div class="step"><h3>Me cuentas el proceso</h3><p>15 minutos. Te digo si merece la pena automatizarlo y cuánto cuesta. Si no, también.</p></div>
-    <div class="step"><h3>Precio por escrito y una muestra</h3><p>Qué se entrega, cuánto cuesta y cuándo se paga, en un correo. En clips, los 3 primeros gratis.</p></div>
-    <div class="step"><h3>Lo instalo y lo ves funcionar</h3><p>En vuestras cuentas, con alguien del equipo delante. Grabación y soporte después.</p></div>
+
+<section id="casos" class="rv" aria-labelledby="h-casos">
+  <div class="eyebrow">Casos</div>
+  <h2 id="h-casos">Tres cosas que ya he hecho. Y cuatro reglas que no cambio.</h2>
+  <div class="cases">
+    <article class="case"><div class="eyebrow">Agencia de formación · 2026</div><p>Vídeo largo → clips subtitulados, 40 guiones puntuados con motor propio, carruseles generados desde un fichero y hub en Notion.</p></article>
+    <article class="case"><div class="eyebrow">Astra Creative Audio · cofundador</div><p>Empresa de software musical operada con varios agentes de IA con memoria y reglas; ~20.000 líneas de producto con agentes; prensa a 64 medios en una semana.</p></article>
+    <article class="case"><div class="eyebrow">TueconomIA · Mytel AI</div><p>100 noticias económicas al día explicadas para 8 perfiles con la API de Gemini. Mi trabajo de fin de grado en Economía.</p></article>
   </div>
   <ul class="rules" aria-label="Reglas fijas">
     <li>Precio por escrito antes de la primera hora</li>
@@ -435,16 +527,6 @@
     <li>Todo queda en vuestras cuentas</li>
     <li>Nada se contesta ni se publica solo</li>
   </ul>
-</section>
-
-<section id="casos" class="rv" aria-labelledby="h-casos">
-  <div class="eyebrow">Casos</div>
-  <h2 id="h-casos">Tres cosas que ya he hecho</h2>
-  <div class="cases">
-    <article class="case"><div class="eyebrow">Agencia de formación · 2026</div><p>Vídeo largo → clips subtitulados, 40 guiones puntuados con motor propio, carruseles generados desde un fichero y hub en Notion.</p></article>
-    <article class="case"><div class="eyebrow">Astra Creative Audio · cofundador</div><p>Empresa de software musical operada con varios agentes de IA con memoria y reglas; ~20.000 líneas de producto con agentes; prensa a 64 medios en una semana.</p></article>
-    <article class="case"><div class="eyebrow">TueconomIA · Mytel AI</div><p>100 noticias económicas al día explicadas para 8 perfiles con la API de Gemini. Mi trabajo de fin de grado en Economía.</p></article>
-  </div>
   <div class="nums">
     <div><b>6</b>clips entregados de un vídeo largo</div>
     <div><b>40</b>guiones puntuados</div>
@@ -501,6 +583,50 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
   } else {document.querySelectorAll('.rv').forEach(function(n){n.classList.add('in')})}
+})();
+
+(function(){
+  var C={
+    clips:{h:5,r:20,inst:0,mo:180,lab:'cortando y subtitulando vídeo',pl:'al mes, 12 clips, sin instalación',ass:'Si hoy no lo hace nadie, lo que ganas no es ahorro: es publicar 7 clips por semana sin contratar a nadie. 28 clips al mes por 180 € salen a 6,4 € el clip.'},
+    correo:{h:6,r:22,inst:450,mo:60,lab:'leyendo y contestando consultas',pl:'instalación 450 € y luego 60 €/mes',ass:'Lo que no mide la calculadora: el presupuesto que se contesta el mismo día se cierra más veces que el que sale el jueves. Eso va aparte.'},
+    informes:{h:2,r:30,inst:300,mo:30,lab:'montando el informe a mano',pl:'300 € por informe y luego 30 €/mes',ass:'Cuento solo las horas de montar el informe. Decidir con el dato el lunes a las 9 en vez del miércoles no cabe en una barra.'},
+    agentes:{h:8,r:25,inst:600,mo:0,lab:'del equipo en tareas repetitivas',pl:'sesión de 3 h, sin cuota',ass:'La sesión deja un agente funcionando sobre una tarea real. Las 600 € son una vez. Si hace falta más, día completo 1.200 € o implantación 2.200 €.'}
+  };
+  var cur='clips',h=document.getElementById('h'),r=document.getElementById('r');
+  if(!h) return;
+  var $=function(i){return document.getElementById(i)};
+  var eur=function(n){return Math.round(n).toLocaleString('es-ES')+' €'};
+  function calc(){
+    var c=C[cur],H=+h.value,R=+r.value;
+    var cost=H*4.33*R, back=H*4.33*0.8, save=cost*0.8, net=save-c.mo;
+    $('ho').textContent=H+' h'; $('ro').textContent=R+' €';
+    $('hl').textContent=c.lab; $('ass').textContent=c.ass;
+    $('cost').textContent=Math.round(cost).toLocaleString('es-ES');
+    $('price').textContent=c.inst?eur(c.inst):eur(c.mo); $('pricel').textContent=c.pl;
+    $('hours').textContent=Math.round(back)+' h';
+    $('net').textContent=(net>=0?'+':'−')+eur(Math.abs(net));
+    var v=$('verdict');
+    if(net<=0){
+      $('pay').textContent='no sale';$('payl').textContent=c.inst?'no recuperas la instalación':'no ganas nada por horas';
+      v.className='verdict bad';
+      v.textContent=cur==='clips'?'Por horas no te compensa. Te compensa solo si hoy no publicas nada y quieres publicar cada semana.':'Con estos números no te compensa por horas. Te lo diría igual en la llamada.';
+    } else {
+      var weeks=c.inst?Math.ceil(c.inst/(net/4.33)):0;
+      $('pay').textContent=weeks===0?'mes 1':(weeks<=4?'semana '+weeks:'mes '+Math.ceil(weeks/4.33));
+      $('payl').textContent=c.inst?'recuperas la instalación':'empiezas a ganar, no hay instalación';
+      v.className='verdict';
+      v.textContent='Te compensa. '+Math.round(back)+' horas vuelven al equipo cada mes'+(c.inst?' y recuperas la instalación en la semana '+weeks:' desde la primera semana')+'.';
+    }
+  }
+  function setCase(k,fromTab){
+    cur=k;h.value=C[k].h;r.value=C[k].r;
+    document.querySelectorAll('.calc .tabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.case===k?'true':'false')});
+    calc();
+  }
+  document.querySelectorAll('.calc .tabs button').forEach(function(b){b.addEventListener('click',function(){setCase(b.dataset.case)})});
+  document.querySelectorAll('.sc[data-case]').forEach(function(a){a.addEventListener('click',function(){setCase(a.dataset.case)})});
+  h.addEventListener('input',calc);r.addEventListener('input',calc);
+  calc();
 })();
 </script>
 </body>

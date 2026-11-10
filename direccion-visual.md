@@ -57,3 +57,19 @@ cada paquete y las reglas a chips bajo «Cómo funciona»); casos en una frase; 
 silueta CSS se sustituye por `clip-bg.jpg`, un fotograma real de un clip entregado en jul-2026 desenfocado (sigma 70,
 irreconocible) que se usa también en los mini-clips y en la línea de tiempo. Error corregido: la clase `sc` del header
 (scroll) chocaba con la clase `sc` de las tarjetas de atajo; ahora `scrolled`.
+
+## Cuarta pasada (10-nov-2026, publicada)
+Pablo: «no llama mucho la atención, ni queda claro, ni es un paso a paso que el cliente entienda y vea cómo nos
+necesita para ganar más dinero ahorrándose». Misma dirección blanca (aprobada); cambia el hilo de venta:
+- Hero: «Tu equipo pierde horas cada semana en tareas que ya se hacen solas». CTA principal → calculadora.
+- **Segundo elemento firma: la calculadora de horas** (`#calculadora`). El cliente elige su caso (4 pestañas, que también
+  fijan los 4 atajos), mueve horas/semana y coste/hora, y un panel amarillo le dice: cuánto le cuesta hoy al mes, precio
+  del paquete, horas que vuelven, lo que le queda cada mes y en qué semana recupera la instalación. Supuesto explícito:
+  una persona sigue dedicando 1 de cada 5 horas a revisar. Si no compensa, lo dice en blanco («te lo diría igual en la
+  llamada»): honestidad como argumento de venta.
+- **Paso a paso con fechas** (`#pasos`): Hoy 15 min → Mañana precio por escrito + 3 clips gratis → Días 2-5 instalado →
+  Semana 2 la persona pasa de hacer a revisar → Mes 2 solo cuota. Cada paso con «tú / yo».
+- Paquetes: la línea Antes/Después pasa a tres filas HOY / CON ESTO / GANAS. Se elimina la sección «Cómo funciona»
+  (absorbida por el paso a paso); las 4 reglas van a «Casos».
+- Corregido: `.packs` con `minmax(0,1fr)` (una tarjeta ensanchaba la rejilla); calculadora y pasos sin animación de
+  aparición (un salto por ancla los dejaba invisibles un instante).

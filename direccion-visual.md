@@ -85,3 +85,11 @@ de ejemplo queda muy cutre blurreada». Cambios:
 - SEO: 4 ofertas más en el JSON-LD (buzones 650, SEO 350, recordatorios 300, web 900), 2 preguntas nuevas en FAQ (HTML y
   schema), meta description nueva, `llms.txt` con el menú, sitemap con fecha.
 - Quitada del todo la animación de aparición `.rv` (al entrar por un ancla en móvil la sección quedaba en blanco).
+
+## Sexta pasada (10-nov-2026, publicada)
+Pablo sobre el fotograma de su toma: «se ve fatal ese vídeo». Se descarta usar material suyo hasta que grabe algo a
+propósito. El teléfono y los mini-clips pasan a una foto de Unsplash enlazada (licencia Unsplash, uso libre, se permite el
+hotlink): `photo-1601814837969-bde7f6604dfd`, mujer sonriendo a cámara con micro Rode y auriculares en una biblioteca
+luminosa, recortada a 9:16 por la CDN (810×1440 para el teléfono, 180×320 para los mini-clips). Lee como un reel real de
+podcast o academia y va con el fondo blanco de la página. Se eliminan `clip-bg.jpg` y `reel-bg.jpg` del repo.
+Elegida entre 42 candidatas (búsquedas: woman talking to camera · teacher explaining to camera · podcast host speaking).

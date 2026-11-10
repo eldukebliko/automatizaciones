@@ -73,3 +73,15 @@ necesita para ganar más dinero ahorrándose». Misma dirección blanca (aprobad
   (absorbida por el paso a paso); las 4 reglas van a «Casos».
 - Corregido: `.packs` con `minmax(0,1fr)` (una tarjeta ensanchaba la rejilla); calculadora y pasos sin animación de
   aparición (un salto por ancla los dejaba invisibles un instante).
+
+## Quinta pasada (10-nov-2026, publicada)
+Pablo: «le falta hacer más servicios por el cliente, gestionarle todos los buzones, mejorarle el SEO…» y «la videollamada
+de ejemplo queda muy cutre blurreada». Cambios:
+- `reel-bg.jpg` sustituye a `clip-bg.jpg`: fotograma real de Pablo a cámara (toma en bruto de su Escritorio, segundo 60,
+  recorte 9:16 a 405×720, sin letras ni nada musical a la vista). Pendiente: su vídeo de 3 min cara a cámara lo sustituirá.
+- Nueva sección `#servicios` «Lo de arriba es lo más pedido. Esto es el menú entero»: 5 grupos por resultado (que te
+  encuentren · que te contesten · que publiques sin trabajar · que decidas con datos · tu equipo con IA), 14 líneas con
+  precio en mono a la derecha. Enlace desde los atajos («Ver el menú entero») y desde la cabecera («Todo el menú»).
+- SEO: 4 ofertas más en el JSON-LD (buzones 650, SEO 350, recordatorios 300, web 900), 2 preguntas nuevas en FAQ (HTML y
+  schema), meta description nueva, `llms.txt` con el menú, sitemap con fecha.
+- Quitada del todo la animación de aparición `.rv` (al entrar por un ancla en móvil la sección quedaba en blanco).
